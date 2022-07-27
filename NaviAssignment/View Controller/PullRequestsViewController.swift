@@ -36,6 +36,21 @@ class PullRequestsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Closed Pull Requests"
+        navigationController?.navigationBar.topItem?.prompt = "github.com/twostraws/wwdc"
+        collectionView.dataSource = dataSource
+        collectionView.contentInset.bottom = 50 // Required for loading indicator
+        registerCell()
+        setupListLayout()
+        setupLoadingIndicator()
+        getData()
+    }
+
+    private func registerCell() {
+        collectionView.register(UINib(nibName: String(describing: PullRequestCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: PullRequestCollectionViewCell.self))
+    }
+
+    private func setupLoadingIndicator() {
         let layoutGuide = view.safeAreaLayoutGuide
         view.addSubview(loadingIndicator)
 
@@ -43,18 +58,6 @@ class PullRequestsViewController: UIViewController {
             layoutGuide.centerXAnchor.constraint(equalTo: loadingIndicator.centerXAnchor),
             layoutGuide.bottomAnchor.constraint(equalTo: loadingIndicator.bottomAnchor, constant: 10)
         ])
-
-        title = "Closed Pull Requests"
-        navigationController?.navigationBar.topItem?.prompt = "github.com/twostraws/wwdc"
-        collectionView.dataSource = dataSource
-        collectionView.contentInset.bottom = 50
-        registerCell()
-        setupListLayout()
-        getData()
-    }
-
-    private func registerCell() {
-        collectionView.register(UINib(nibName: String(describing: PullRequestCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: PullRequestCollectionViewCell.self))
     }
 
     private func setupListLayout(withEstimatedHeight estimatedHeight: CGFloat = 120) {
@@ -97,10 +100,8 @@ class PullRequestsViewController: UIViewController {
                 }
             } else {
                 DispatchQueue.main.async {
-                    //print("Reload")
                     self.loadingIndicator.stopAnimating()
                     self.update(with: self.viewModel.allPullRequests)
-                    //self.collectionView.reloadData()
                 }
             }
         })
@@ -113,11 +114,6 @@ extension PullRequestsViewController: UICollectionViewDelegate {
             viewModel.page += 1
             getData()
         }
-    }
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //let snapshot = dataSource.snapshot()
-        //navigator?.navigate(to: .details(movie: snapshot.itemIdentifiers[indexPath.item]))
     }
 }
 

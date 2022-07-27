@@ -14,5 +14,4 @@ protocol APIData {
     var method: HTTPMethod { get }
     var parameters: [URLQueryItem] { get }
     var headers: [String: String]? { get }
-    //var dataType: ResponseDataType { get }
 }
