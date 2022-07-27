@@ -55,8 +55,7 @@ enum PullRequestsAPI: APIData {
         switch self {
         case .getPullRequests:
             let values = [
-                HTTPHeaderKeys.accept.rawValue: HeaderContentType.json.rawValue,
-                HTTPHeaderKeys.authToken.rawValue: "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"
+                HTTPHeaderKeys.accept.rawValue: HeaderContentType.json.rawValue
             ]
 
             return values
