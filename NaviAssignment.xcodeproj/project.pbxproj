@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A0056B4328897CC500D2AC37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0056B4228897CC500D2AC37 /* AppDelegate.swift */; };
 		A0056B4528897CC500D2AC37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0056B4428897CC500D2AC37 /* SceneDelegate.swift */; };
-		A0056B4728897CC500D2AC37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0056B4628897CC500D2AC37 /* ViewController.swift */; };
+		A0056B4728897CC500D2AC37 /* PullRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0056B4628897CC500D2AC37 /* PullRequestsViewController.swift */; };
 		A0056B4A28897CC500D2AC37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0056B4828897CC500D2AC37 /* Main.storyboard */; };
 		A0056B4C28897CC600D2AC37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0056B4B28897CC600D2AC37 /* Assets.xcassets */; };
 		A0056B4F28897CC600D2AC37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0056B4D28897CC600D2AC37 /* LaunchScreen.storyboard */; };
@@ -20,13 +20,22 @@
 		A06DB2C8288EF845004AE18F /* APIClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DB2C7288EF845004AE18F /* APIClientProtocol.swift */; };
 		A06DB2CA288EF8F4004AE18F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DB2C9288EF8F4004AE18F /* NetworkError.swift */; };
 		A06DB2CC288F00BD004AE18F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DB2CB288F00BD004AE18F /* APIClient.swift */; };
+		A06DB2CE288FE0E4004AE18F /* PullRequestsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DB2CD288FE0E4004AE18F /* PullRequestsAPI.swift */; };
+		A06DB2D0288FF193004AE18F /* PullRequestsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DB2CF288FF193004AE18F /* PullRequestsModels.swift */; };
+		A06DB2D3289002AD004AE18F /* PullRequestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DB2D1289002AD004AE18F /* PullRequestCollectionViewCell.swift */; };
+		A06DB2D4289002AD004AE18F /* PullRequestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A06DB2D2289002AD004AE18F /* PullRequestCollectionViewCell.xib */; };
+		A06DB2D628902A5B004AE18F /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DB2D528902A5B004AE18F /* AppDependencyContainer.swift */; };
+		A06DB2D828902BBE004AE18F /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DB2D728902BBE004AE18F /* AppFlowCoordinator.swift */; };
+		A06DB2DB28902C54004AE18F /* PullRequestsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DB2DA28902C54004AE18F /* PullRequestsRepository.swift */; };
+		A06DB2DD28904030004AE18F /* PullRequestsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DB2DC28904030004AE18F /* PullRequestsViewModel.swift */; };
+		A06DB2DF289181E7004AE18F /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DB2DE289181E7004AE18F /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A0056B3F28897CC500D2AC37 /* NaviAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaviAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0056B4228897CC500D2AC37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0056B4428897CC500D2AC37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A0056B4628897CC500D2AC37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A0056B4628897CC500D2AC37 /* PullRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsViewController.swift; sourceTree = "<group>"; };
 		A0056B4928897CC500D2AC37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0056B4B28897CC600D2AC37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0056B4E28897CC600D2AC37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +47,15 @@
 		A06DB2C7288EF845004AE18F /* APIClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientProtocol.swift; sourceTree = "<group>"; };
 		A06DB2C9288EF8F4004AE18F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		A06DB2CB288F00BD004AE18F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		A06DB2CD288FE0E4004AE18F /* PullRequestsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsAPI.swift; sourceTree = "<group>"; };
+		A06DB2CF288FF193004AE18F /* PullRequestsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsModels.swift; sourceTree = "<group>"; };
+		A06DB2D1289002AD004AE18F /* PullRequestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestCollectionViewCell.swift; sourceTree = "<group>"; };
+		A06DB2D2289002AD004AE18F /* PullRequestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PullRequestCollectionViewCell.xib; sourceTree = "<group>"; };
+		A06DB2D528902A5B004AE18F /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
+		A06DB2D728902BBE004AE18F /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		A06DB2DA28902C54004AE18F /* PullRequestsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsRepository.swift; sourceTree = "<group>"; };
+		A06DB2DC28904030004AE18F /* PullRequestsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsViewModel.swift; sourceTree = "<group>"; };
+		A06DB2DE289181E7004AE18F /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,14 +88,21 @@
 		A0056B4128897CC500D2AC37 /* NaviAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				A06DB2D928902C25004AE18F /* Repository */,
 				A06DB2BD288EB0DD004AE18F /* Network */,
 				A0056B4228897CC500D2AC37 /* AppDelegate.swift */,
 				A0056B4428897CC500D2AC37 /* SceneDelegate.swift */,
-				A0056B4628897CC500D2AC37 /* ViewController.swift */,
+				A06DB2E52891A0B9004AE18F /* View Controller */,
 				A0056B4828897CC500D2AC37 /* Main.storyboard */,
 				A0056B4B28897CC600D2AC37 /* Assets.xcassets */,
 				A0056B4D28897CC600D2AC37 /* LaunchScreen.storyboard */,
 				A0056B5028897CC600D2AC37 /* Info.plist */,
+				A06DB2E42891A083004AE18F /* PullRequestsAPI */,
+				A06DB2E62891A0F2004AE18F /* Views */,
+				A06DB2E02891A04C004AE18F /* DI */,
+				A06DB2E12891A057004AE18F /* Coordinator */,
+				A06DB2E32891A070004AE18F /* ViewModel */,
+				A06DB2E22891A063004AE18F /* Extension */,
 			);
 			path = NaviAssignment;
 			sourceTree = "<group>";
@@ -102,6 +127,72 @@
 				A06DB2C7288EF845004AE18F /* APIClientProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		A06DB2D928902C25004AE18F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A06DB2DA28902C54004AE18F /* PullRequestsRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A06DB2E02891A04C004AE18F /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				A06DB2D528902A5B004AE18F /* AppDependencyContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		A06DB2E12891A057004AE18F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A06DB2D728902BBE004AE18F /* AppFlowCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A06DB2E22891A063004AE18F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A06DB2DE289181E7004AE18F /* UIImageViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A06DB2E32891A070004AE18F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A06DB2DC28904030004AE18F /* PullRequestsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A06DB2E42891A083004AE18F /* PullRequestsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				A06DB2CD288FE0E4004AE18F /* PullRequestsAPI.swift */,
+				A06DB2CF288FF193004AE18F /* PullRequestsModels.swift */,
+			);
+			path = PullRequestsAPI;
+			sourceTree = "<group>";
+		};
+		A06DB2E52891A0B9004AE18F /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A0056B4628897CC500D2AC37 /* PullRequestsViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		A06DB2E62891A0F2004AE18F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A06DB2D1289002AD004AE18F /* PullRequestCollectionViewCell.swift */,
+				A06DB2D2289002AD004AE18F /* PullRequestCollectionViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0056B4F28897CC600D2AC37 /* LaunchScreen.storyboard in Resources */,
+				A06DB2D4289002AD004AE18F /* PullRequestCollectionViewCell.xib in Resources */,
 				A0056B4C28897CC600D2AC37 /* Assets.xcassets in Resources */,
 				A0056B4A28897CC500D2AC37 /* Main.storyboard in Resources */,
 			);
@@ -175,13 +267,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A06DB2DB28902C54004AE18F /* PullRequestsRepository.swift in Sources */,
 				A06DB2C4288EF11D004AE18F /* NetworkManager.swift in Sources */,
-				A0056B4728897CC500D2AC37 /* ViewController.swift in Sources */,
+				A0056B4728897CC500D2AC37 /* PullRequestsViewController.swift in Sources */,
 				A06DB2C6288EF80A004AE18F /* NetworkManagerProtocol.swift in Sources */,
+				A06DB2DD28904030004AE18F /* PullRequestsViewModel.swift in Sources */,
 				A06DB2CC288F00BD004AE18F /* APIClient.swift in Sources */,
+				A06DB2D0288FF193004AE18F /* PullRequestsModels.swift in Sources */,
+				A06DB2CE288FE0E4004AE18F /* PullRequestsAPI.swift in Sources */,
+				A06DB2D3289002AD004AE18F /* PullRequestCollectionViewCell.swift in Sources */,
+				A06DB2D828902BBE004AE18F /* AppFlowCoordinator.swift in Sources */,
 				A06DB2C2288EBA02004AE18F /* NetworkConfig.swift in Sources */,
+				A06DB2D628902A5B004AE18F /* AppDependencyContainer.swift in Sources */,
 				A0056B4328897CC500D2AC37 /* AppDelegate.swift in Sources */,
 				A06DB2C8288EF845004AE18F /* APIClientProtocol.swift in Sources */,
+				A06DB2DF289181E7004AE18F /* UIImageViewExtension.swift in Sources */,
 				A06DB2CA288EF8F4004AE18F /* NetworkError.swift in Sources */,
 				A06DB2C0288EB414004AE18F /* APIDataProtocol.swift in Sources */,
 				A0056B4528897CC500D2AC37 /* SceneDelegate.swift in Sources */,
@@ -340,7 +440,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -370,7 +470,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

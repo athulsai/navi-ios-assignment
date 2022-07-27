@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PullRequestCollectionViewCell" id="gTV-IL-0wX" customClass="PullRequestCollectionViewCell" customModule="NaviAssignment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="423" height="158"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="423" height="158"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bgx-D0-Cfo">
+                        <rect key="frame" x="0.0" y="0.0" width="423" height="149"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5z-73-ZMT">
+                                <rect key="frame" x="0.0" y="0.0" width="423" height="86.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL3-j4-5bM">
+                                <rect key="frame" x="0.0" y="94.5" width="423" height="14.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Aj4-In-TIi">
+                                <rect key="frame" x="0.0" y="117" width="423" height="32"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jeJ-F0-nfq">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="GzD-IA-19k"/>
+                                            <constraint firstAttribute="height" constant="32" id="ZQz-V6-OoL"/>
+                                        </constraints>
+                                        <imageReference key="image" image="user-placeholder" symbolScale="large"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJc-Jo-nQD">
+                                        <rect key="frame" x="40" y="0.0" width="383" height="32"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="INb-sK-okK" userLabel="Separator View">
+                        <rect key="frame" x="4" y="157" width="415" height="1"/>
+                        <viewLayoutGuide key="safeArea" id="rQw-k0-IMY"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="BJt-rI-XIw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="bgx-D0-Cfo" secondAttribute="trailing" id="09l-5s-7U0"/>
+                <constraint firstAttribute="trailing" secondItem="INb-sK-okK" secondAttribute="trailing" constant="4" id="5Wv-l6-FYL"/>
+                <constraint firstItem="INb-sK-okK" firstAttribute="top" secondItem="bgx-D0-Cfo" secondAttribute="bottom" constant="8" id="BVa-2p-bPA"/>
+                <constraint firstItem="INb-sK-okK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="ByV-bV-S1a"/>
+                <constraint firstItem="bgx-D0-Cfo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="C1d-lz-7Kh"/>
+                <constraint firstItem="bgx-D0-Cfo" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Xh7-JU-jo0"/>
+                <constraint firstAttribute="bottom" secondItem="INb-sK-okK" secondAttribute="bottom" id="cKQ-GJ-UUe"/>
+            </constraints>
+            <size key="customSize" width="423" height="158"/>
+            <connections>
+                <outlet property="authorLabel" destination="yJc-Jo-nQD" id="4Nj-ao-meu"/>
+                <outlet property="messageLabel" destination="AL3-j4-5bM" id="UXi-fy-V0T"/>
+                <outlet property="titleLabel" destination="s5z-73-ZMT" id="Qcr-wh-7Fv"/>
+                <outlet property="userImageView" destination="jeJ-F0-nfq" id="EAy-LJ-E4q"/>
+            </connections>
+            <point key="canvasLocation" x="402.17391304347831" y="129.91071428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="user-placeholder" width="90" height="90"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
