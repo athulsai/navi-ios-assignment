@@ -14,8 +14,8 @@ class APIClient: APIClientProtocol {
         self.networkManager = networkManager
     }
 
-    func fetch<T: Codable>(request: APIData, basePath: String, keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy, completionHandler: @escaping ((Result<T, NetworkError>) -> Void)) {
-        self.networkManager.startRequest(request: request, basePath: basePath) { (data, response, error) in
+    func fetch<T: Codable>(request: APIData, keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy, completionHandler: @escaping ((Result<[T], NetworkError>) -> Void)) {
+        self.networkManager.startRequest(request: request) { (data, response, error) in
 
             if let _ = error{
                 let errorType = NetworkError.failed
@@ -35,8 +35,9 @@ class APIClient: APIClientProtocol {
             case .success:
                 let jsonDecoder = JSONDecoder()
                 jsonDecoder.keyDecodingStrategy = keyDecodingStrategy
+                jsonDecoder.dateDecodingStrategy = .iso8601
                 do {
-                    let apiResponseModel = try jsonDecoder.decode(T.self, from: receivedData)
+                    let apiResponseModel = try jsonDecoder.decode([T].self, from: receivedData)
                     completionHandler(.success(apiResponseModel))
                 } catch {
                     completionHandler(.failure(NetworkError.unableToDecodeResponseData(errorDescription: error.localizedDescription)))

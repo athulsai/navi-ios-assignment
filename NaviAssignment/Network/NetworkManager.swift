@@ -14,9 +14,9 @@ class NetworkManager: NetworkManagerProtocol {
 
     private init() { }
 
-    func startRequest(request: APIData, basePath: String, completion: @escaping (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
+    func startRequest(request: APIData, completion: @escaping (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
         do {
-            let urlRequest = try self.createURLRequest(apiData: request, basePath: basePath)
+            let urlRequest = try self.createURLRequest(apiData: request)
 
             task = urlSession.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
                 completion(data, response, error)
@@ -29,7 +29,7 @@ class NetworkManager: NetworkManagerProtocol {
 }
 
 private extension NetworkManager {
-    private func createURLRequest(apiData: APIData, basePath: String) throws -> URLRequest {
+    private func createURLRequest(apiData: APIData) throws -> URLRequest {
         let components = buildURL(endpoint: apiData)
         if let url = components.url {
             var urlRequest = URLRequest(url: url)
