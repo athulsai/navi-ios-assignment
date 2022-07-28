@@ -1,5 +1,5 @@
 //
-//  PullRequestsViewControllerViewController.swift
+//  PullRequestsViewController.swift
 //  NaviAssignment
 //
 //  Created by Athul Sai on 21/07/22.
