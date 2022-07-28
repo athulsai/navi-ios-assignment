@@ -12,11 +12,11 @@ class AppDependencyContainer {
         let pullRequestsRepository = makePullRequestsRepository()
         let pullRequestsViewModel = makePullRequestsViewModel(with: pullRequestsRepository)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let searchVC = storyboard.instantiateViewController(identifier: String(describing: PullRequestsViewController.self), creator: { coder in
+        let pullRequestsVC = storyboard.instantiateViewController(identifier: String(describing: PullRequestsViewController.self), creator: { coder in
             return PullRequestsViewController(coder: coder, viewModel: pullRequestsViewModel)
         })
 
-        return searchVC
+        return pullRequestsVC
     }
 
     private func makePullRequestsViewModel(with repository: PullRequestsRepositoryPrototcol) -> PullRequestsViewModel {
